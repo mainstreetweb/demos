@@ -2099,6 +2099,8 @@ footer{background:var(--sand);padding:clamp(52px,6vw,74px) 0 0;font-size:.93rem;
     mqReduce.addEventListener("change", function (e) { reduceMotion = e.matches; });
   }
 })();
+
+setTimeout(function(){document.querySelectorAll('.reveal:not(.in),.stagger:not(.in)').forEach(function(el){el.classList.add('in')})},2500);
 </script>
 </body>
 </html>

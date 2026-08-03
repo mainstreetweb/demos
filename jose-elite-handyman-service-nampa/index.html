@@ -602,6 +602,7 @@ if('IntersectionObserver' in window){
     });
   },{threshold:.14});
   document.querySelectorAll('.reveal,.stagger').forEach(function(el){ io.observe(el); });
+setTimeout(function(){document.querySelectorAll('.reveal:not(.in),.stagger:not(.in)').forEach(function(el){el.classList.add('in')})},2500);
 }else{
   document.querySelectorAll('.reveal,.stagger').forEach(function(el){ el.classList.add('in'); });
 }

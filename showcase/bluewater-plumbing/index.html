@@ -1182,6 +1182,8 @@ footer{background:#0F1514;color:#ADB8B5;padding:64px 0 30px;font-size:.9rem}
   tickClock();
   window.setInterval(tickClock, 30000);
 })();
+
+setTimeout(function(){document.querySelectorAll('.reveal:not(.in),.stagger:not(.in)').forEach(function(el){el.classList.add('in')})},2500);
 </script>
 </body>
 </html>

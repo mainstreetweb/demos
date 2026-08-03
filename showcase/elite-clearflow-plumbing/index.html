@@ -2227,6 +2227,8 @@ body.has-callbar{padding-bottom:78px}
   var yearEl = $('#footYear');
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 })();
+
+setTimeout(function(){document.querySelectorAll('.reveal:not(.in),.stagger:not(.in)').forEach(function(el){el.classList.add('in')})},2500);
 </script>
 </body>
 </html>

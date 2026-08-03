@@ -663,6 +663,8 @@ if(FINE && !REDUCED){
   });
 }
 })();
+
+setTimeout(function(){document.querySelectorAll('.reveal:not(.in),.stagger:not(.in)').forEach(function(el){el.classList.add('in')})},2500);
 </script>
 </body>
 </html>

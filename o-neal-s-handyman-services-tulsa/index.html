@@ -722,6 +722,8 @@ if(magZone && magBtn && FINE && !REDUCED){
   magZone.addEventListener('pointerleave', function(){ magBtn.style.transform = ''; });
 }
 })();
+
+setTimeout(function(){document.querySelectorAll('.reveal:not(.in),.stagger:not(.in)').forEach(function(el){el.classList.add('in')})},2500);
 </script>
 </body>
 </html>
