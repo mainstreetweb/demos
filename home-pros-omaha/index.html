@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Pros — Handyman, Remodeling &amp; Basement Finishing in Omaha, NE</title>
+<meta name="description" content="Home Pros of Omaha: basement finishing, drywall, kitchen and bathroom remodeling, flooring, tile, decks and siding across Omaha, Bellevue, Papillion, Gretna and Elkhorn. Rated 4.6 on Google. Call (402) 515-7680.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ================= TOKENS — SAGE NEUTRAL + CALM TEAL (light only) ================= */
+:root{
+  --bg:#F5F5F0;
+  --surface:#FFFFFF;
+  --band:#EDEDE6;
+  --ink:#0F172A;
+  --ink-2:#2B3648;
+  --muted:#5D6875;
+  --line:#E3E3DA;
+  --line-2:#CDCDC2;
+  --accent:#0891B2;
+  --accent-deep:#0A7490;
+  --accent-tint:#E2F4F8;
+  --accent-border:#B4E0EB;
+  --radius:14px;
+  --radius-sm:9px;
+  --shadow-xs:0 1px 2px rgba(15,23,42,.05);
+  --shadow:0 12px 28px rgba(15,23,42,.08);
+  --shadow-lg:0 22px 50px rgba(15,23,42,.11);
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);
+  line-height:1.65;font-size:16.5px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Sora',system-ui,sans-serif;font-weight:600;line-height:1.16;letter-spacing:-.025em;color:var(--ink)}
+img{max-width:100%;display:block}
+a{color:inherit}
+::selection{background:#C3E9F2;color:var(--ink)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;font-weight:600;padding:14px 22px;z-index:300;border-radius:0 0 8px 0}
+.skip:focus{left:0}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--accent-deep);outline-offset:3px;border-radius:4px}
+
+/* ================= BUTTONS ================= */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:600;font-size:1.01rem;
+  border-radius:var(--radius-sm);padding:15px 26px;min-height:54px;text-decoration:none;cursor:pointer;border:1px solid transparent;
+  transition:transform .2s var(--ease),background .2s ease,box-shadow .2s ease,border-color .2s ease,color .2s ease}
+.btn svg{flex:none}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 8px 18px rgba(8,145,178,.20)}
+.btn-primary:hover{background:var(--accent-deep);transform:translateY(-2px);box-shadow:0 14px 26px rgba(8,145,178,.26)}
+.btn-secondary{background:var(--surface);color:var(--ink);border-color:var(--line-2)}
+.btn-secondary:hover{border-color:var(--accent);color:var(--accent-deep);transform:translateY(-2px);box-shadow:var(--shadow)}
+
+/* ================= SCROLL PROGRESS ================= */
+#progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:130;background:var(--accent)}
+
+/* ================= HEADER ================= */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);transition:box-shadow .3s ease,background .3s ease}
+header.scrolled{background:rgba(255,255,255,.98);box-shadow:0 6px 20px rgba(15,23,42,.07)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:14px;transition:padding .3s ease}
+header.scrolled .nav{padding:8px 0}
+.brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);min-height:44px}
+.brand-mark{flex:none;display:block;color:var(--ink);transition:transform .3s var(--ease)}
+.brand-txt{display:flex;flex-direction:column;justify-content:center}
+.brand-name{font-family:'Sora',sans-serif;font-weight:600;font-size:1.08rem;line-height:1.1;letter-spacing:-.02em}
+.brand-sub{font-size:.6rem;font-weight:500;letter-spacing:.17em;text-transform:uppercase;color:var(--muted);line-height:1.6;margin-top:2px}
+header.scrolled .brand-mark{transform:scale(.94)}
+.brand:hover .brand-mark{transform:translateY(-2px) scale(1.04)}
+.nav-links{display:none;gap:26px;font-weight:500;font-size:.93rem;color:var(--muted)}
+.nav-links a{text-decoration:none;padding:10px 2px;position:relative}
+.nav-links a::after{content:"";position:absolute;left:0;right:100%;bottom:5px;height:2px;background:var(--accent);transition:right .25s var(--ease)}
+.nav-links a:hover{color:var(--ink)}
+.nav-links a:hover::after{right:0}
+@media(min-width:940px){.nav-links{display:flex}}
+.nav-call{display:inline-flex;align-items:center;gap:9px;text-decoration:none;background:var(--accent);color:#fff;
+  font-weight:600;font-size:.98rem;padding:11px 19px;min-height:46px;border-radius:var(--radius-sm);
+  transition:background .2s ease,transform .2s var(--ease),box-shadow .2s ease}
+.nav-call:hover{background:var(--accent-deep);transform:translateY(-2px);box-shadow:0 10px 20px rgba(8,145,178,.24)}
+.nav-call .num-short{display:none}
+
+/* ================= HERO ================= */
+.hero{background:linear-gradient(180deg,#FFFFFF 0%,#EDEDE6 52%,var(--bg) 100%);border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-170px;right:-140px;width:520px;height:520px;border-radius:50%;
+  background:radial-gradient(circle,rgba(8,145,178,.085) 0%,rgba(8,145,178,0) 68%);pointer-events:none}
+.hero::after{content:"";position:absolute;left:-140px;bottom:-190px;width:420px;height:420px;border-radius:50%;
+  background:radial-gradient(circle,rgba(15,23,42,.055) 0%,rgba(15,23,42,0) 70%);pointer-events:none}
+.hero-in{display:grid;gap:44px;padding:58px 0 66px;align-items:center;position:relative;z-index:1}
+@media(min-width:940px){.hero-in{grid-template-columns:1.1fr .9fr;padding:66px 0 78px}}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;background:var(--accent-tint);border:1px solid var(--accent-border);color:var(--accent-deep);
+  font-size:.8rem;font-weight:600;letter-spacing:.03em;padding:7px 14px;border-radius:999px}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none;animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.45);opacity:.45}}
+.hero h1{font-size:clamp(2.15rem,5.3vw,3.35rem);margin-top:20px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero .lead{margin-top:16px;font-size:1.1rem;color:var(--muted);max-width:33rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.trust{display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;margin-top:26px;color:var(--muted);font-size:.93rem}
+.trust .stars{color:var(--accent);letter-spacing:2px;font-size:1rem}
+.trust strong{color:var(--ink);font-weight:600}
+.trust .sep{width:1px;height:16px;background:var(--line-2);display:none}
+@media(min-width:520px){.trust .sep{display:block}}
+.hero-side{max-width:440px;width:100%;justify-self:center}
+.photo-card{position:relative;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--surface);box-shadow:var(--shadow)}
+.photo-card img{width:100%;height:280px;object-fit:cover}
+.photo-card.img-fail{display:none}
+.photo-card::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(105deg,rgba(255,255,255,0) 38%,rgba(255,255,255,.34) 50%,rgba(255,255,255,0) 62%);
+  transform:translateX(-120%)}
+.js .photo-card::after{animation:sheen 7s ease-in-out 1.6s infinite}
+@keyframes sheen{0%{transform:translateX(-120%)}22%,100%{transform:translateX(120%)}}
+.rating-chip{display:flex;align-items:center;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px 20px;margin-top:14px;box-shadow:var(--shadow-xs)}
+.rating-chip .score{font-family:'Sora',sans-serif;font-weight:700;font-size:2.05rem;line-height:1;color:var(--accent)}
+.rating-chip .stars{color:var(--accent);letter-spacing:2px;font-size:.95rem;line-height:1.2}
+.rating-chip small{display:block;color:var(--muted);font-size:.82rem}
+.fact-list{margin-top:14px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:18px 20px;list-style:none;display:grid;gap:11px;box-shadow:var(--shadow-xs)}
+.fact-list li{display:flex;gap:11px;align-items:flex-start;font-size:.94rem;color:var(--ink-2)}
+.fact-list li svg{flex:none;color:var(--accent);margin-top:3px}
+
+/* ================= SECTIONS ================= */
+section{padding:74px 0;position:relative}
+.band{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.band-2{background:var(--band);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.kicker{display:inline-flex;align-items:center;gap:9px;font-weight:600;letter-spacing:.16em;font-size:.72rem;text-transform:uppercase;color:var(--accent-deep)}
+.kicker::before{content:"";width:22px;height:1px;background:var(--line-2)}
+h2{font-size:clamp(1.8rem,4.1vw,2.5rem);margin-top:14px}
+.sub{color:var(--muted);margin-top:12px;max-width:40rem}
+
+/* ================= SERVICES ================= */
+.grid-services{display:grid;gap:16px;margin-top:40px;grid-template-columns:repeat(auto-fit,minmax(255px,1fr))}
+.svc{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;
+  transition:transform .25s var(--ease),box-shadow .25s ease,border-color .25s ease}
+.svc:hover{transform:translateY(-4px);border-color:var(--line-2);box-shadow:var(--shadow)}
+.svc .ico{width:44px;height:44px;border-radius:var(--radius-sm);background:var(--accent-tint);display:flex;align-items:center;justify-content:center;
+  color:var(--accent);margin-bottom:16px;transition:background .25s ease,color .25s ease}
+.svc:hover .ico{background:var(--accent);color:#fff}
+.svc h3{font-size:1.14rem}
+.svc p{color:var(--muted);font-size:.94rem;margin-top:8px}
+
+/* ================= STATS ================= */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:14px;margin-top:38px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 14px;text-align:center;
+  transition:transform .25s var(--ease),box-shadow .25s ease}
+.stat:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.stat .num{font-family:'Sora',sans-serif;font-weight:700;font-size:clamp(1.9rem,4vw,2.5rem);line-height:1;color:var(--ink)}
+.stat .num .u{color:var(--accent)}
+.stat .lbl{font-size:.83rem;color:var(--muted);margin-top:8px}
+
+/* ================= REVIEWS CAROUSEL ================= */
+.rev-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px}
+.rev-score{display:flex;align-items:center;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 22px;box-shadow:var(--shadow-xs)}
+.rev-score .big{font-family:'Sora',sans-serif;font-weight:700;font-size:2.2rem;line-height:1;color:var(--accent)}
+.rev-score .stars{color:var(--accent);letter-spacing:2px;line-height:1.2}
+.rev-score small{display:block;color:var(--muted);font-size:.82rem}
+.carousel{margin-top:36px;--gap:18px}
+.rev-view{overflow:hidden}
+.rev-track{display:flex;column-gap:var(--gap);will-change:transform;transition:transform .55s var(--ease)}
+.rev-card{flex:0 0 100%;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px 24px;display:flex;flex-direction:column;gap:12px;box-shadow:var(--shadow-xs);
+  transition:border-color .25s ease,box-shadow .25s ease,opacity .4s ease}
+.rev-card:hover{border-color:var(--line-2);box-shadow:var(--shadow)}
+@media(min-width:900px){.rev-card{flex:0 0 calc((100% - (2 * var(--gap))) / 3)}}
+.rev-card .stars{color:var(--accent);letter-spacing:2px;font-size:.95rem;line-height:1}
+.rev-card blockquote{font-size:.97rem;color:var(--ink-2);line-height:1.62}
+.rev-card .who{margin-top:auto;padding-top:6px;font-weight:600;font-size:.9rem}
+.rev-card .who span{display:block;font-weight:400;color:var(--muted);font-size:.79rem}
+.rev-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;margin-top:20px}
+.rev-dots{display:flex;gap:2px}
+.rev-dots .dot{width:40px;height:40px;border:none;background:none;cursor:pointer;display:grid;place-items:center;padding:0}
+.rev-dots .dot .d{width:9px;height:9px;border-radius:50%;background:var(--line-2);transition:background .2s ease,transform .2s var(--ease),width .2s var(--ease)}
+.rev-dots .dot:hover .d{background:var(--muted)}
+.rev-dots .dot.on .d{background:var(--accent);width:22px;border-radius:999px}
+.all-reviews{display:inline-flex;align-items:center;gap:7px;min-height:44px;color:var(--accent-deep);font-weight:600;font-size:.95rem;
+  text-decoration-thickness:1.5px;text-underline-offset:3px;transition:gap .2s var(--ease)}
+.all-reviews:hover{gap:12px}
+
+/* ================= STEPS ================= */
+.grid-steps{display:grid;gap:24px;margin-top:38px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.step{position:relative;padding-left:58px;transition:transform .25s var(--ease)}
+.step:hover{transform:translateY(-3px)}
+.step .num{position:absolute;left:0;top:2px;width:42px;height:42px;border-radius:50%;background:var(--accent-tint);color:var(--accent-deep);
+  border:1px solid var(--accent-border);display:flex;align-items:center;justify-content:center;font-family:'Sora',sans-serif;font-weight:700;font-size:1.1rem;
+  transition:background .25s ease,color .25s ease,transform .25s var(--ease)}
+.step:hover .num{background:var(--accent);color:#fff;transform:scale(1.06)}
+.step h3{font-size:1.12rem}
+.step p{color:var(--muted);font-size:.94rem;margin-top:7px}
+
+/* ================= FAQ ================= */
+.faq-list{max-width:790px;margin-top:30px}
+.qa{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);margin-top:12px;overflow:hidden;
+  transition:border-color .25s ease,box-shadow .25s ease}
+.qa:hover{box-shadow:var(--shadow-xs)}
+.qa.open{border-color:var(--line-2)}
+.qa .q{width:100%;text-align:left;background:none;border:none;font:inherit;color:var(--ink);font-weight:600;
+  padding:19px 22px;min-height:44px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:1rem}
+.qa .chev{transition:transform .3s var(--ease);color:var(--accent);flex:none}
+.qa.open .chev{transform:rotate(180deg)}
+.qa .a{max-height:0;overflow:hidden;transition:max-height .4s var(--ease);color:var(--muted);font-size:.95rem}
+.qa.open .a{max-height:400px}
+.qa .a p{padding:0 22px 20px}
+
+/* ================= FORM ================= */
+.form-grid{display:grid;gap:34px;margin-top:34px}
+@media(min-width:900px){.form-grid{grid-template-columns:1.05fr .95fr;align-items:start}}
+.form{display:grid;gap:15px;max-width:560px}
+.form label{font-weight:500;font-size:.9rem;display:block;margin-bottom:6px;color:var(--ink-2)}
+.form input,.form textarea{width:100%;border:1px solid var(--line-2);background:var(--surface);color:var(--ink);
+  border-radius:var(--radius-sm);padding:13px 14px;font:inherit;font-size:1rem;min-height:48px;transition:border-color .2s ease,box-shadow .2s ease}
+.form input:hover,.form textarea:hover{border-color:var(--accent)}
+.form input::placeholder,.form textarea::placeholder{color:var(--muted);opacity:.75}
+.form input:focus,.form textarea:focus{outline:3px solid var(--accent);outline-offset:2px;border-color:transparent}
+.form-note{font-size:.85rem;color:var(--muted)}
+.form .btn-primary{justify-self:start}
+.contact-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;box-shadow:var(--shadow-xs)}
+.contact-card h3{font-size:1.08rem}
+.contact-card dl{margin-top:16px;display:grid;gap:14px}
+.contact-card dt{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.contact-card dd{margin-top:3px;font-size:1rem;color:var(--ink)}
+.contact-card dd a{color:var(--accent-deep);font-weight:600;text-decoration:none;display:inline-flex;align-items:center;min-height:34px}
+.contact-card dd a:hover{text-decoration:underline}
+
+/* ================= FOOTER (light) ================= */
+footer{background:var(--surface);border-top:1px solid var(--line);padding:44px 0 40px;font-size:.92rem;color:var(--muted)}
+.foot{display:flex;flex-wrap:wrap;gap:22px 40px;justify-content:space-between}
+.foot .brand{margin-bottom:10px}
+.foot a{color:var(--accent-deep);font-weight:600;text-decoration:none;display:inline-flex;align-items:center;min-height:34px}
+.foot a:hover{text-decoration:underline}
+.disclaimer{margin-top:26px;padding-top:18px;border-top:1px solid var(--line);font-size:.79rem;color:var(--muted)}
+
+/* ================= REVEALS / ENTRANCE ================= */
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+.js .stagger>*{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s var(--ease)}
+.js .stagger.in>*{opacity:1;transform:none}
+.js .stagger.in>*:nth-child(2){transition-delay:.08s}
+.js .stagger.in>*:nth-child(3){transition-delay:.16s}
+.js .stagger.in>*:nth-child(4){transition-delay:.24s}
+.js .stagger.in>*:nth-child(5){transition-delay:.32s}
+.js .stagger.in>*:nth-child(6){transition-delay:.4s}
+.js .hero-anim{opacity:0;transform:translateY(22px);animation:rise .8s var(--ease) forwards}
+.js .hero-anim.d1{animation-delay:.05s}
+.js .hero-anim.d2{animation-delay:.16s}
+.js .hero-anim.d3{animation-delay:.27s}
+.js .hero-anim.d4{animation-delay:.38s}
+.js .hero-anim.d5{animation-delay:.48s}
+.js .hero-anim.d6{animation-delay:.34s}
+@keyframes rise{to{opacity:1;transform:none}}
+
+/* ================= MOBILE CALL BAR ================= */
+.callbar{display:none}
+@media(max-width:720px){
+  .callbar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:70;background:var(--accent);
+    justify-content:center;box-shadow:0 -6px 20px rgba(15,23,42,.18)}
+  .callbar a{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:600;font-size:1.05rem;
+    padding:16px;width:100%;justify-content:center;min-height:58px}
+  body{padding-bottom:66px}
+  .nav-call .num-txt{display:none}
+  .nav-call .num-short{display:inline}
+  .hero-in{padding:44px 0 52px}
+  section{padding:60px 0}
+}
+@media(max-width:400px){
+  .brand-sub{font-size:.55rem;letter-spacing:.13em}
+  .brand-name{font-size:.96rem}
+}
+
+/* ================= REDUCED MOTION ================= */
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none !important;transition:none !important}
+  .js .reveal,.js .stagger>*,.js .hero-anim{opacity:1;transform:none}
+}
+</style>
+<noscript><style>
+.reveal,.stagger>*,.hero-anim{opacity:1;transform:none}
+.qa .a{max-height:none}
+.rev-track{flex-wrap:wrap;row-gap:18px}
+.rev-card{flex:1 1 280px}
+.rev-dots{display:none}
+</style></noscript>
+<script>document.documentElement.className+=" js"</script>
+</head>
+<body>
+<a class="skip" href="#top">Skip to content</a>
+<div id="progress" aria-hidden="true"></div>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Home Pros — home">
+      <span class="brand-mark" aria-hidden="true"><svg width="42" height="42" viewBox="0 0 44 44" fill="none" role="presentation"><path d="M6 21.5 22 8l16 13.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M25.5 20.5h6.5" stroke="#0891B2" stroke-width="2.6" stroke-linecap="round"/><path d="M18 36V25.5h8V36" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 24.5V36h22V24.5" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span class="brand-txt">
+        <span class="brand-name">Home Pros</span>
+        <span class="brand-sub">Repair · Renovate · Restore — Omaha, NE</span>
+      </span>
+    </a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#how">How it works</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="nav-call" href="tel:+14025157680">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span class="num-txt">(402) 515-7680</span><span class="num-short" aria-hidden="true">Call</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ 1. HERO ============ -->
+<div class="hero">
+  <div class="wrap hero-in">
+    <div>
+      <span class="eyebrow hero-anim d1"><span class="dot" aria-hidden="true"></span>Handyman &amp; remodeling · Omaha, Nebraska</span>
+      <h1 class="hero-anim d2">Repair. Renovate. <em>Restore.</em></h1>
+      <p class="lead hero-anim d3">Basements, drywall, kitchens, bathrooms, flooring, decks and siding — for homeowners and real-estate agents across Omaha, Bellevue, Papillion, Gretna and Elkhorn. Rated 4.6 on Google.</p>
+      <div class="cta-row hero-anim d4">
+        <a class="btn btn-primary" id="heroCall" href="tel:+14025157680">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (402) 515-7680
+        </a>
+        <a class="btn btn-secondary" href="#book">Request a quote</a>
+      </div>
+      <div class="trust hero-anim d5">
+        <span><span class="stars" aria-hidden="true">★★★★★</span> <strong>4.6</strong> · 7 Google reviews</span>
+        <span class="sep" aria-hidden="true"></span>
+        <span>Basements · Drywall · Remodels</span>
+        <span class="sep" aria-hidden="true"></span>
+        <span>Omaha metro, Nebraska</span>
+      </div>
+    </div>
+    <div class="hero-side hero-anim d6">
+      <figure class="photo-card" data-ph>
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlYsg2i-_Zb3bVgRqCns4vE4gnSdD8oB07yEATTxh_cYCmFtuO2eWSZ_qL7vIyHVSHW-TonCuqHNGveDcuJ3ZMpVtM4--sYLgbxPwP6hqXaTHK64SqDKyL_2jn1LC4e57y5PrAI=w1200-h800-k-no"
+             alt="The Home Pros work van, photographed for the business's own Google listing" loading="eager" fetchpriority="high"
+             onerror="this.closest('[data-ph]').classList.add('img-fail')">
+      </figure>
+      <div class="rating-chip">
+        <span class="score" aria-hidden="true">4.6</span>
+        <span>
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <small>7 Google reviews</small>
+        </span>
+      </div>
+      <ul class="fact-list">
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Rated 4.6 out of 5 across 7 Google reviews</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Two of those Google reviews are written by real-estate agents</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>“I have no doubt the quality of his work exceeded any of the others” — a Google review</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 2. SERVICES ============ -->
+<section id="services">
+  <div class="wrap">
+    <span class="kicker">What gets done</span>
+    <h2 class="reveal">One contractor, the whole project</h2>
+    <p class="sub reveal">Kitchen, bathroom, countertop, deck, siding and tile work are listed on the business's own website. The rest is described in Google reviews of jobs already finished around Omaha.</p>
+    <div class="grid-services stagger">
+      <div class="svc">
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18"/><path d="M5 20V9l7-5 7 5v11"/><path d="M9 20v-6h6v6"/><path d="M5 14h4"/><path d="M15 14h4"/></svg></div>
+        <h3>Basement finishing</h3>
+        <p>“They did the full scope of framing, plumbing, electrical, drywall, painting, finish work, etc...the whole project,” one Google review says.</p>
+      </div>
+      <div class="svc">
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 12h18"/><path d="M11 4v8"/><path d="M15 12v8"/></svg></div>
+        <h3>Drywall, mudding &amp; taping</h3>
+        <p>A reviewer hung their own drywall and called Home Pros for the seams: “an excellent and timely job helping us finish our drywall.”</p>
+      </div>
+      <div class="svc">
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 11h18"/><path d="M7.5 8h.01"/><path d="M12 15h5"/></svg></div>
+        <h3>Kitchen &amp; bathroom remodels</h3>
+        <p>Both are listed as services on the business's own website, alongside complete remodels and countertops.</p>
+      </div>
+      <div class="svc">
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
+        <h3>Flooring &amp; tile</h3>
+        <p>Listed on their own website, and described in a Google review: “Dustin came out and gave us a great estimate on the floors.”</p>
+      </div>
+      <div class="svc">
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9h18"/><path d="M3 15h18"/><path d="M5 9V5h14v4"/><path d="M5 15v4h14v-4"/></svg></div>
+        <h3>Decks &amp; siding</h3>
+        <p>Decks, deck staining, and siding repair and installation are all listed as services on the business's own website.</p>
+      </div>
+      <div class="svc">
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <h3>Repairs before a sale</h3>
+        <p>A real-estate agent's review: “when it comes to the inspections we have many repairs that have to be completed before closing.”</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. REVIEWS + NUMBERS ============ -->
+<section id="reviews" class="band">
+  <div class="wrap">
+    <div class="rev-head">
+      <div>
+        <span class="kicker">Real Google reviews</span>
+        <h2 class="reveal">What Omaha customers wrote</h2>
+      </div>
+      <div class="rev-score reveal" role="img" aria-label="Rated 4.6 out of 5 stars across 7 Google reviews">
+        <span class="big" aria-hidden="true">4.6</span>
+        <span aria-hidden="true"><span class="stars">★★★★★</span><small>7 Google reviews</small></span>
+      </div>
+    </div>
+
+    <div class="carousel reveal" id="revCar" role="group" aria-roledescription="carousel" aria-label="Customer reviews from Google">
+      <div class="rev-view">
+        <div class="rev-track">
+          <article class="rev-card">
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            <blockquote><p>“Dustin and his team of subcontractors finished our basement last year, and we couldn't be happier! They did the full scope of framing, plumbing, electrical, drywall, painting, finish work, etc...the whole project.”</p></blockquote>
+            <div class="who">Lindsay Stubbe <span>Google review</span></div>
+          </article>
+          <article class="rev-card">
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            <blockquote><p>“Dustin and his team did an excellent and timely job helping us finish our drywall. We had done most of the work in our basement ourselves, including hanging the drywall, but did not feel skilled or quick enough to tackle mudding/taping/finishing the seams.”</p></blockquote>
+            <div class="who">Kristin Reed <span>Google review</span></div>
+          </article>
+          <article class="rev-card">
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            <blockquote><p>“I have recommended Dustin to my real estate clients many times to make repairs or to update their home in preparing it for market. He gets the job done, he is fair and the clients enjoy working with him.”</p></blockquote>
+            <div class="who">Mary Kay Young <span>Google review</span></div>
+          </article>
+          <article class="rev-card">
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            <blockquote><p>“Extremely happy with the customer service and quality of work that Dustin did for us. His estimates were well below many of the other contractors and I have no doubt the quality of his work exceeded any of the others as well.”</p></blockquote>
+            <div class="who">Gary Williams <span>Google review</span></div>
+          </article>
+          <article class="rev-card">
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            <blockquote><p>“Great work and dedication. On time and no issues. Dustin came out and gave us a great estimate on the floors. The project was able to be done in 5 days time. Overall, great job!”</p></blockquote>
+            <div class="who">Alex <span>Google review</span></div>
+          </article>
+          <article class="rev-card">
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            <blockquote><p>“I wanted to say that working with Home Pros has been nothing but positive. We have been selling Real Estate now for 14 years and when it comes to the inspections we have many repairs that have to be completed before closing.”</p></blockquote>
+            <div class="who">JD Erb <span>Google review</span></div>
+          </article>
+        </div>
+      </div>
+      <div class="rev-foot">
+        <div class="rev-dots" role="group" aria-label="Choose a group of reviews"></div>
+        <a class="all-reviews" href="https://www.google.com/maps/search/Home+Pros+17809+Storage+Rd+Omaha+NE" rel="noopener">Read all 7 reviews on Google
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="stats stagger" aria-label="By the numbers">
+      <div class="stat"><div class="num"><span class="cnt" data-count="4.6" data-dec="1">4.6</span><span class="u">★</span></div><div class="lbl">Google rating</div></div>
+      <div class="stat"><div class="num"><span class="cnt" data-count="7">7</span></div><div class="lbl">Google reviews</div></div>
+      <div class="stat"><div class="num"><span class="cnt" data-count="11">11</span></div><div class="lbl">Services listed on their own site</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. HOW IT WORKS ============ -->
+<section id="how">
+  <div class="wrap">
+    <span class="kicker">How it goes</span>
+    <h2 class="reveal">How a project goes</h2>
+    <div class="grid-steps stagger">
+      <div class="step"><div class="num">1</div><h3>Call and walk the job</h3><p>“Dustin came out and gave us a great estimate on the floors,” one Google review describes — the job looked at before anything is agreed.</p></div>
+      <div class="step"><div class="num">2</div><h3>Agree the scope and the number</h3><p>“His estimates were well below many of the other contractors,” another Google review says, comparing the quotes they collected.</p></div>
+      <div class="step"><div class="num">3</div><h3>One crew, start to finish</h3><p>“He gets the job done, he is fair and the clients enjoy working with him,” writes a real-estate agent who has sent clients his way for years.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. FAQ ============ -->
+<section class="band-2" id="faq">
+  <div class="wrap">
+    <span class="kicker">Good to know</span>
+    <h2 class="reveal">Questions people call with</h2>
+    <div class="faq-list reveal">
+      <div class="qa open">
+        <button class="q" type="button" aria-expanded="true">What kind of work do you take on?<svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="a"><p>The business's own website lists kitchen and bathroom remodeling, complete remodels, countertops, drywall, flooring, tile, painting, decks, deck staining and siding. Google reviews add basement finishing and pre-sale repairs.</p></div>
+      </div>
+      <div class="qa">
+        <button class="q" type="button" aria-expanded="false">Can you handle a whole basement, or only one trade?<svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="a"><p>One Google review describes the whole thing: “They did the full scope of framing, plumbing, electrical, drywall, painting, finish work, etc...the whole project.”</p></div>
+      </div>
+      <div class="qa">
+        <button class="q" type="button" aria-expanded="false">Do you work with real-estate agents?<svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="a"><p>Two of the Google reviews are from agents. One writes: “I have recommended Dustin to my real estate clients many times to make repairs or to update their home in preparing it for market.”</p></div>
+      </div>
+      <div class="qa">
+        <button class="q" type="button" aria-expanded="false">How do estimates work?<svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="a"><p>Reviewers mention them directly — “Dustin came out and gave us a great estimate on the floors”, and another compared quotes and found “his estimates were well below many of the other contractors”. Call with the job and ask.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. BOOKING ============ -->
+<section id="book">
+  <div class="wrap">
+    <span class="kicker">Get in touch</span>
+    <h2 class="reveal">Tell us about the project</h2>
+    <p class="sub reveal">Fastest answer is a phone call: <a href="tel:+14025157680" style="color:var(--accent-deep);font-weight:600">(402) 515-7680</a>. Or leave your details below.</p>
+    <div class="form-grid">
+      <form class="form reveal" onsubmit="event.preventDefault();this.querySelector('.form-note').textContent='This form is activated on your live website — for now, please call (402) 515-7680.';">
+        <div><label for="fname">Your name</label><input id="fname" name="name" placeholder="Jane Smith" autocomplete="name"></div>
+        <div><label for="fphone">Phone number</label><input id="fphone" name="phone" type="tel" placeholder="(402) 555-0100" autocomplete="tel"></div>
+        <div><label for="fjob">What needs doing?</label><textarea id="fjob" name="job" rows="3" placeholder="e.g. a basement to finish, drywall to tape, or repairs needed before a closing"></textarea></div>
+        <button class="btn btn-primary" type="submit">Send my request</button>
+        <p class="form-note">The contact form activates on the live version — for now, call directly.</p>
+      </form>
+      <div class="contact-card reveal">
+        <h3>Home Pros</h3>
+        <dl>
+          <div><dt>Phone</dt><dd><a href="tel:+14025157680">(402) 515-7680</a></dd></div>
+          <div><dt>Serving</dt><dd>Omaha, Bellevue, Papillion, Gretna &amp; Elkhorn, NE</dd></div>
+          <div><dt>Rating</dt><dd>4.6 ★ · 7 Google reviews</dd></div>
+          <div><dt>On Google</dt><dd><a href="https://www.google.com/maps/search/Home+Pros+17809+Storage+Rd+Omaha+NE" rel="noopener">View on Google Maps</a></dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <span class="brand">
+          <span class="brand-mark" aria-hidden="true"><svg width="42" height="42" viewBox="0 0 44 44" fill="none" role="presentation"><path d="M6 21.5 22 8l16 13.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M25.5 20.5h6.5" stroke="#0891B2" stroke-width="2.6" stroke-linecap="round"/><path d="M18 36V25.5h8V36" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 24.5V36h22V24.5" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="brand-txt">
+            <span class="brand-name">Home Pros</span>
+            <span class="brand-sub">Repair · Renovate · Restore — Omaha, NE</span>
+          </span>
+        </span>
+        <div>Omaha, Bellevue, Papillion, Gretna &amp; Elkhorn, NE</div>
+      </div>
+      <div>
+        <div><a href="tel:+14025157680">(402) 515-7680</a></div>
+        <div><a href="https://www.google.com/maps/search/Home+Pros+17809+Storage+Rd+Omaha+NE" rel="noopener">4.6 ★ on Google · 7 reviews</a></div>
+      </div>
+    </div>
+    <p class="disclaimer">Concept preview for Home Pros · MainStreet Web Studio</p>
+  </div>
+</footer>
+
+<div class="callbar"><a href="tel:+14025157680"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call (402) 515-7680</a></div>
+
+<script>
+(function(){
+  var prog=document.getElementById('progress'),hdr=document.getElementById('hdr');
+  function onScroll(){
+    var h=document.documentElement,max=h.scrollHeight-h.clientHeight;
+    prog.style.width=(max>0?(h.scrollTop||document.body.scrollTop)/max*100:0)+'%';
+    hdr.classList.toggle('scrolled',(window.scrollY||0)>12);
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  /* scroll reveals */
+  var io=('IntersectionObserver' in window)?new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{rootMargin:'0px 0px -8% 0px',threshold:.08}):null;
+  var targets=document.querySelectorAll('.reveal,.stagger');
+  if(io){targets.forEach(function(t){io.observe(t);});}
+  else{targets.forEach(function(t){t.classList.add('in');});}
+
+  /* count-up */
+  var counted=new WeakSet();
+  function countUp(el){
+    if(counted.has(el))return;counted.add(el);
+    var target=parseFloat(el.getAttribute('data-count')),dec=parseInt(el.getAttribute('data-dec')||'0',10),t0=null,dur=1100;
+    function step(ts){if(!t0)t0=ts;var k=Math.min((ts-t0)/dur,1);
+      el.textContent=(target*(1-Math.pow(1-k,3))).toFixed(dec);
+      if(k<1)requestAnimationFrame(step);else el.textContent=target.toFixed(dec);}
+    requestAnimationFrame(step);
+  }
+  var cio=('IntersectionObserver' in window)?new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){countUp(e.target);cio.unobserve(e.target);}});
+  },{threshold:.5}):null;
+  document.querySelectorAll('.cnt').forEach(function(el){if(cio)cio.observe(el);});
+
+  /* reviews carousel */
+  var car=document.getElementById('revCar');
+  if(car){
+    var track=car.querySelector('.rev-track'),cards=car.querySelectorAll('.rev-card'),
+        dotsWrap=car.querySelector('.rev-dots'),idx=0,timer=null;
+    function perView(){return window.innerWidth>=900?3:1;}
+    function pages(){return Math.max(1,Math.ceil(cards.length/perView()));}
+    function render(){
+      var pv=perView(),card=cards[0];if(!card)return;
+      var gap=parseFloat(getComputedStyle(track).columnGap)||18;
+      var step=(card.getBoundingClientRect().width+gap)*pv;
+      if(idx>=pages())idx=0;
+      track.style.transform='translateX('+(-idx*step)+'px)';
+      dotsWrap.innerHTML='';
+      for(var i=0;i<pages();i++){
+        (function(i){
+          var b=document.createElement('button');
+          b.className='dot'+(i===idx?' on':'');b.type='button';
+          b.setAttribute('aria-label','Reviews group '+(i+1));
+          b.innerHTML='<span class="d"></span>';
+          b.onclick=function(){idx=i;render();restart();};
+          dotsWrap.appendChild(b);
+        })(i);
+      }
+    }
+    function next(){idx=(idx+1)%pages();render();}
+    function restart(){if(timer)clearInterval(timer);timer=setInterval(next,6000);}
+    var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    render();if(!reduce)restart();
+    car.addEventListener('mouseenter',function(){if(timer)clearInterval(timer);});
+    car.addEventListener('mouseleave',function(){if(!reduce)restart();});
+    car.addEventListener('focusin',function(){if(timer)clearInterval(timer);});
+    window.addEventListener('resize',render);
+  }
+
+  /* FAQ accordion */
+  document.querySelectorAll('.qa .q').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var qa=btn.parentElement,open=qa.classList.contains('open');
+      document.querySelectorAll('.qa').forEach(function(o){
+        o.classList.remove('open');o.querySelector('.q').setAttribute('aria-expanded','false');
+      });
+      if(!open){qa.classList.add('open');btn.setAttribute('aria-expanded','true');}
+    });
+  });
+
+  /* reveal safety timer — sections must never stay invisible (build-demo.md HARD RULE) */
+  setTimeout(function(){
+    document.querySelectorAll('.reveal:not(.in),.stagger:not(.in)').forEach(function(el){el.classList.add('in');});
+  },2500);
+})();
+</script>
+</body>
+</html>
