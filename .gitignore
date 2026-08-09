@@ -1,0 +1,5 @@
+# Local plugin audit logs — must never reach the public demos repo.
+# Added 2026-08-09: these appeared untracked in the working copy during a daily run,
+# and deploy commits use `git add -A`, so without this they would be published.
+receipts/
+review-receipts/
