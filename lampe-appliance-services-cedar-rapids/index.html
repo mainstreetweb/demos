@@ -100,6 +100,8 @@ header.scrolled .brand-mark{transform:scale(.94)}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
 .trust{display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;margin-top:26px;color:var(--muted);font-size:.93rem}
 .trust .stars{color:var(--accent);letter-spacing:2px;font-size:1rem}
+.stars{position:relative;display:inline-block;white-space:nowrap;color:var(--line2)}
+.stars .stars-on{position:absolute;left:0;top:0;overflow:hidden;color:var(--accent);white-space:nowrap;letter-spacing:inherit;font-size:inherit;line-height:inherit}
 .trust strong{color:var(--ink);font-weight:600}
 .trust .sep{width:1px;height:16px;background:var(--line-2);display:none}
 @media(min-width:520px){.trust .sep{display:block}}
@@ -328,7 +330,7 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:44px 0
         <a class="btn btn-secondary" href="#book">Describe the problem</a>
       </div>
       <div class="trust hero-anim d5">
-        <span><span class="stars" aria-hidden="true">★★★★★</span> <strong>4.8</strong> · 210 Google reviews</span>
+        <span><span class="stars" aria-hidden="true"><span class="stars-on" style="width:96.0%">★★★★★</span>★★★★★</span> <strong>4.8</strong> · 210 Google reviews</span>
         <span class="sep" aria-hidden="true"></span>
         <span>Washers · Dryers · Fridges · Ranges</span>
         <span class="sep" aria-hidden="true"></span>
@@ -344,7 +346,7 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:44px 0
       <div class="rating-chip">
         <span class="score" aria-hidden="true">4.8</span>
         <span>
-          <span class="stars" aria-hidden="true">★★★★★</span>
+          <span class="stars" aria-hidden="true"><span class="stars-on" style="width:96.0%">★★★★★</span>★★★★★</span>
           <small>210 Google reviews</small>
         </span>
       </div>
@@ -408,7 +410,7 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:44px 0
       </div>
       <div class="rev-score reveal" role="img" aria-label="Rated 4.8 out of 5 stars across 210 Google reviews">
         <span class="big" aria-hidden="true">4.8</span>
-        <span aria-hidden="true"><span class="stars">★★★★★</span><small>210 Google reviews</small></span>
+        <span aria-hidden="true"><span class="stars" aria-hidden="true"><span class="stars-on" style="width:96.0%">★★★★★</span>★★★★★</span><small>210 Google reviews</small></span>
       </div>
     </div>
 
@@ -416,32 +418,26 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:44px 0
       <div class="rev-view">
         <div class="rev-track">
           <article class="rev-card">
-            <span class="stars" aria-hidden="true">★★★★★</span>
             <blockquote><p>“I was relieved that Home Appliance Center recommended Lampe Appliance to repair my 33 year old Maytag washing machine. Very punctual, thorough and efficient. The cost was more than reasonable because it saved me from replacing!”</p></blockquote>
             <div class="who">Betty Zebell <span>Google review</span></div>
           </article>
           <article class="rev-card">
-            <span class="stars" aria-hidden="true">★★★★★</span>
             <blockquote><p>“John was very friendly, patient, and informative concerning my problem and solved the problem of strange noises coming from my refrigerator to my great satisfaction. Also, the cost was very reasonable. I would definitely call them again and recommend them.”</p></blockquote>
             <div class="who">max's mom <span>Google review</span></div>
           </article>
           <article class="rev-card">
-            <span class="stars" aria-hidden="true">★★★★★</span>
             <blockquote><p>“John was amazing today. His first visit today was to look the refrigerator over &amp; diagnose the problem. It needed a new motor to cool correctly. He went back to the store where he did have the correct motor and made another trip out to our house to complete the job.”</p></blockquote>
             <div class="who">Susie Heald <span>Google review</span></div>
           </article>
           <article class="rev-card">
-            <span class="stars" aria-hidden="true">★★★★★</span>
             <blockquote><p>“John did a great job analyzing and figuring out why my stove was not firing. I appreciate his knowledge and expertise while also considering my budget.”</p></blockquote>
             <div class="who">Julie Bushman <span>Google review</span></div>
           </article>
           <article class="rev-card">
-            <span class="stars" aria-hidden="true">★★★★★</span>
             <blockquote><p>“We have used Lampe Appliance for repairing our appliances for decades. They are always very friendly, punctual and professional. I would highly recommend their services.”</p></blockquote>
             <div class="who">Nancy Hirleman <span>Google review</span></div>
           </article>
           <article class="rev-card">
-            <span class="stars" aria-hidden="true">★★★★★</span>
             <blockquote><p>“John came out quickly. Diagnosed the issue. Found that Frigidaire only sold the part as a $700+ unit, searched the net and found the part, ordered it, and replaced it in 3 days. Wonderful service!!”</p></blockquote>
             <div class="who">David Wise <span>Google review</span></div>
           </article>

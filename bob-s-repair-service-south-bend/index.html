@@ -100,6 +100,8 @@ header.scrolled .brand-mark{transform:scale(.94)}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
 .trust{display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;margin-top:26px;color:var(--muted);font-size:.93rem}
 .trust .stars{color:var(--accent);letter-spacing:2px;font-size:1rem}
+.stars{position:relative;display:inline-block;white-space:nowrap;color:var(--line2)}
+.stars .stars-on{position:absolute;left:0;top:0;overflow:hidden;color:var(--accent);white-space:nowrap;letter-spacing:inherit;font-size:inherit;line-height:inherit}
 .trust strong{color:var(--ink);font-weight:600}
 .trust .sep{width:1px;height:16px;background:var(--line-2);display:none}
 @media(min-width:520px){.trust .sep{display:block}}
@@ -328,7 +330,7 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:44px 0
         <a class="btn btn-secondary" href="#book">Book a repair</a>
       </div>
       <div class="trust hero-anim d5">
-        <span><span class="stars" aria-hidden="true">★★★★★</span> <strong>4.5</strong> · 37 Google reviews</span>
+        <span><span class="stars" aria-hidden="true"><span class="stars-on" style="width:90.0%">★★★★★</span>★★★★★</span> <strong>4.5</strong> · 37 Google reviews</span>
         <span class="sep" aria-hidden="true"></span>
         <span>Washers · Ovens · Ranges</span>
         <span class="sep" aria-hidden="true"></span>
@@ -344,7 +346,7 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:44px 0
       <div class="rating-chip">
         <span class="score" aria-hidden="true">4.5</span>
         <span>
-          <span class="stars" aria-hidden="true">★★★★★</span>
+          <span class="stars" aria-hidden="true"><span class="stars-on" style="width:90.0%">★★★★★</span>★★★★★</span>
           <small>37 Google reviews</small>
         </span>
       </div>
@@ -408,7 +410,7 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:44px 0
       </div>
       <div class="rev-score reveal" role="img" aria-label="Rated 4.5 out of 5 stars across 37 Google reviews">
         <span class="big" aria-hidden="true">4.5</span>
-        <span aria-hidden="true"><span class="stars">★★★★★</span><small>37 Google reviews</small></span>
+        <span aria-hidden="true"><span class="stars" aria-hidden="true"><span class="stars-on" style="width:90.0%">★★★★★</span>★★★★★</span><small>37 Google reviews</small></span>
       </div>
     </div>
 
@@ -416,22 +418,18 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:44px 0
       <div class="rev-view">
         <div class="rev-track">
           <article class="rev-card">
-            <span class="stars" aria-hidden="true">★★★★★</span>
             <blockquote><p>“Byron was great. He got right to work and found and fixed the problem with my washing machine. He even gave me information on my washer that I didn't know. Fast friendly and affordable. I will call again if I'm need something else fixed.”</p></blockquote>
             <div class="who">Samantha Hampton <span>Google review</span></div>
           </article>
           <article class="rev-card">
-            <span class="stars" aria-hidden="true">★★★★★</span>
             <blockquote><p>“This was our first experience with Bob's Repair Service &amp; they were fantastic! They helped problem solve the issues with our double ovens, through countless calls, research, &amp; assistance (whereas other local repair companies told us they "had to be replaced &amp; weren't worth fixing").”</p></blockquote>
             <div class="who">Sarah Andrews <span>Google review</span></div>
           </article>
           <article class="rev-card">
-            <span class="stars" aria-hidden="true">★★★★★</span>
             <blockquote><p>“Outstanding service. Get Byron’s business cards so you can share with neighbors! The company is in South Bend (I’m in Elkhart) and I know they travel as far as Rochester.”</p></blockquote>
             <div class="who">Steve &amp; Jeanne Kline <span>Google review</span></div>
           </article>
           <article class="rev-card">
-            <span class="stars" aria-hidden="true">★★★★★</span>
             <blockquote><p>“FIRST time needing them!! Got me in the same week AND a day early because they were ahead of schedule! The tech was in and out within 10 minutes with my oven fixed!!! SUPER AFFORDABLE!!”</p></blockquote>
             <div class="who">Michelle Lowery <span>Google review</span></div>
           </article>

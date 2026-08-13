@@ -100,6 +100,8 @@ header.scrolled .brand-mark{transform:scale(.94)}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
 .trust{display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;margin-top:26px;color:var(--muted);font-size:.93rem}
 .trust .stars{color:var(--accent);letter-spacing:2px;font-size:1rem}
+.stars{position:relative;display:inline-block;white-space:nowrap;color:var(--line2)}
+.stars .stars-on{position:absolute;left:0;top:0;overflow:hidden;color:var(--accent);white-space:nowrap;letter-spacing:inherit;font-size:inherit;line-height:inherit}
 .trust strong{color:var(--ink);font-weight:600}
 .trust .sep{width:1px;height:16px;background:var(--line-2);display:none}
 @media(min-width:520px){.trust .sep{display:block}}
@@ -328,7 +330,7 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:44px 0
         <a class="btn btn-secondary" href="#book">Ask what's in stock</a>
       </div>
       <div class="trust hero-anim d5">
-        <span><span class="stars" aria-hidden="true">★★★★★</span> <strong>4.6</strong> · 159 Google reviews</span>
+        <span><span class="stars" aria-hidden="true"><span class="stars-on" style="width:92.0%">★★★★★</span>★★★★★</span> <strong>4.6</strong> · 159 Google reviews</span>
         <span class="sep" aria-hidden="true"></span>
         <span>Washers · Dryers · Fridges · Ranges</span>
         <span class="sep" aria-hidden="true"></span>
@@ -344,7 +346,7 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:44px 0
       <div class="rating-chip">
         <span class="score" aria-hidden="true">4.6</span>
         <span>
-          <span class="stars" aria-hidden="true">★★★★★</span>
+          <span class="stars" aria-hidden="true"><span class="stars-on" style="width:92.0%">★★★★★</span>★★★★★</span>
           <small>159 Google reviews</small>
         </span>
       </div>
@@ -408,7 +410,7 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:44px 0
       </div>
       <div class="rev-score reveal" role="img" aria-label="Rated 4.6 out of 5 stars across 159 Google reviews">
         <span class="big" aria-hidden="true">4.6</span>
-        <span aria-hidden="true"><span class="stars">★★★★★</span><small>159 Google reviews</small></span>
+        <span aria-hidden="true"><span class="stars" aria-hidden="true"><span class="stars-on" style="width:92.0%">★★★★★</span>★★★★★</span><small>159 Google reviews</small></span>
       </div>
     </div>
 
@@ -416,27 +418,22 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:44px 0
       <div class="rev-view">
         <div class="rev-track">
           <article class="rev-card">
-            <span class="stars" aria-hidden="true">★★★★★</span>
             <blockquote><p>“We have had an extremely great experience with appliance warehouse, We bought a fridge from them and when it stopped working, they had a new fridge to us within two days. The lady who was working at the warehouse was so kind and helpful.”</p></blockquote>
             <div class="who">Anna Baker <span>Google review</span></div>
           </article>
           <article class="rev-card">
-            <span class="stars" aria-hidden="true">★★★★★</span>
             <blockquote><p>“I highly recommend this store for anyone in need of a used appliance! After researching several local options, I chose them based on their great reviews, and they exceeded my expectations.”</p></blockquote>
             <div class="who">ZorroX <span>Google review</span></div>
           </article>
           <article class="rev-card">
-            <span class="stars" aria-hidden="true">★★★★★</span>
             <blockquote><p>“These people are amazing! My washing machine I bought almost a year ago went out, they did 2 different service calls trying to fix it and the 3rd service call switched my machine out for free 🥹 I definitely recommend this place!”</p></blockquote>
             <div class="who">Julia Lawrence <span>Google review</span></div>
           </article>
           <article class="rev-card">
-            <span class="stars" aria-hidden="true">★★★★★</span>
             <blockquote><p>“We truly had a great experience so far with Appliance Warehouse. Sarah was laid back, not pushy at all, efficient and kind. She told me about the warranty, assured me that my washer and dryer would be super clean and gave me a discount.”</p></blockquote>
             <div class="who">Jamey Ortego <span>Google review</span></div>
           </article>
           <article class="rev-card">
-            <span class="stars" aria-hidden="true">★★★★★</span>
             <blockquote><p>“We needed a last-minute U-Haul rental, and the process couldn't have been easier! I called in the afternoon and was able to pick up the truck the next morning. Even with the app having issues and technology not working, the staff went above and beyond to make it happen.”</p></blockquote>
             <div class="who">Denae Beckett <span>Google review</span></div>
           </article>

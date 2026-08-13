@@ -100,6 +100,8 @@ header.scrolled .brand-mark{transform:scale(.94)}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
 .trust{display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;margin-top:26px;color:var(--muted);font-size:.93rem}
 .trust .stars{color:var(--accent);letter-spacing:2px;font-size:1rem}
+.stars{position:relative;display:inline-block;white-space:nowrap;color:var(--line2)}
+.stars .stars-on{position:absolute;left:0;top:0;overflow:hidden;color:var(--accent);white-space:nowrap;letter-spacing:inherit;font-size:inherit;line-height:inherit}
 .trust strong{color:var(--ink);font-weight:600}
 .trust .sep{width:1px;height:16px;background:var(--line-2);display:none}
 @media(min-width:520px){.trust .sep{display:block}}
@@ -328,7 +330,7 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:44px 0
         <a class="btn btn-secondary" href="#book">Ask what's in stock</a>
       </div>
       <div class="trust hero-anim d5">
-        <span><span class="stars" aria-hidden="true">★★★★★</span> <strong>4.5</strong> · 79 Google reviews</span>
+        <span><span class="stars" aria-hidden="true"><span class="stars-on" style="width:90.0%">★★★★★</span>★★★★★</span> <strong>4.5</strong> · 79 Google reviews</span>
         <span class="sep" aria-hidden="true"></span>
         <span>Used appliances · Repairs · Delivery</span>
         <span class="sep" aria-hidden="true"></span>
@@ -344,7 +346,7 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:44px 0
       <div class="rating-chip">
         <span class="score" aria-hidden="true">4.5</span>
         <span>
-          <span class="stars" aria-hidden="true">★★★★★</span>
+          <span class="stars" aria-hidden="true"><span class="stars-on" style="width:90.0%">★★★★★</span>★★★★★</span>
           <small>79 Google reviews</small>
         </span>
       </div>
@@ -408,7 +410,7 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:44px 0
       </div>
       <div class="rev-score reveal" role="img" aria-label="Rated 4.5 out of 5 stars across 79 Google reviews">
         <span class="big" aria-hidden="true">4.5</span>
-        <span aria-hidden="true"><span class="stars">★★★★★</span><small>79 Google reviews</small></span>
+        <span aria-hidden="true"><span class="stars" aria-hidden="true"><span class="stars-on" style="width:90.0%">★★★★★</span>★★★★★</span><small>79 Google reviews</small></span>
       </div>
     </div>
 
@@ -416,22 +418,18 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:44px 0
       <div class="rev-view">
         <div class="rev-track">
           <article class="rev-card">
-            <span class="stars" aria-hidden="true">★★★★★</span>
             <blockquote><p>“I was in the market for a stove, so stopped in and was greeted by friendly staff who showed me a good selection of affordable options. If you want to save money, it's a great alternative for buying brand new, and they offer a very reasonable delivery &amp; set up fee.”</p></blockquote>
             <div class="who">Rosemary Skinner <span>Google review</span></div>
           </article>
           <article class="rev-card">
-            <span class="stars" aria-hidden="true">★★★★★</span>
             <blockquote><p>“I've purchased from this store multiple times now, and each experience has been fantastic! I've bought a stove, fridge, washer, and dryer, and every time the service has been top-notch.”</p></blockquote>
             <div class="who">Gerardo Desarden <span>Google review</span></div>
           </article>
           <article class="rev-card">
-            <span class="stars" aria-hidden="true">★★★★★</span>
             <blockquote><p>“I always look at the reviews when searching for whatever I need. DJ Mulligans has the best repair service of appliances I have seen in a long time.”</p></blockquote>
             <div class="who">Jackie O <span>Google review</span></div>
           </article>
           <article class="rev-card">
-            <span class="stars" aria-hidden="true">★★★★★</span>
             <blockquote><p>“What a great local business! Super helpful and nice to my son. Provided advice and sound opinions. Highly recommended!”</p></blockquote>
             <div class="who">Matthew Field <span>Google review</span></div>
           </article>
