@@ -100,6 +100,8 @@ header.scrolled .brand-mark{transform:scale(.94)}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
 .trust{display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;margin-top:26px;color:var(--muted);font-size:.93rem}
 .trust .stars{color:var(--accent);letter-spacing:2px;font-size:1rem}
+.stars{position:relative;display:inline-block;white-space:nowrap;color:var(--line2)}
+.stars .stars-on{position:absolute;left:0;top:0;overflow:hidden;color:var(--accent);white-space:nowrap;letter-spacing:inherit;font-size:inherit;line-height:inherit}
 .trust strong{color:var(--ink);font-weight:600}
 .trust .sep{width:1px;height:16px;background:var(--line-2);display:none}
 @media(min-width:520px){.trust .sep{display:block}}
@@ -328,7 +330,7 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:44px 0
         <a class="btn btn-secondary" href="#book">Ask about a job</a>
       </div>
       <div class="trust hero-anim d5">
-        <span><span class="stars" aria-hidden="true" style="position:relative;display:inline-block;white-space:nowrap"><span style="color:#D6D8DC">★★★★★</span><span class="stars-on" style="position:absolute;left:0;top:0;overflow:hidden;white-space:nowrap;width:100.0%">★★★★★</span></span> <strong>5.0</strong> · 20 Google reviews</span>
+        <span><span class="stars" aria-hidden="true"><span class="stars-on" style="width:100.0%">★★★★★</span>★★★★★</span> <strong>5.0</strong> · 20 Google reviews</span>
         <span class="sep" aria-hidden="true"></span>
         <span>Fences · Gutters · Trim · Repairs</span>
         <span class="sep" aria-hidden="true"></span>
@@ -344,14 +346,14 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:44px 0
       <div class="rating-chip">
         <span class="score" aria-hidden="true">5.0</span>
         <span>
-          <span class="stars" aria-hidden="true" style="position:relative;display:inline-block;white-space:nowrap"><span style="color:#D6D8DC">★★★★★</span><span class="stars-on" style="position:absolute;left:0;top:0;overflow:hidden;white-space:nowrap;width:100.0%">★★★★★</span></span>
+          <span class="stars" aria-hidden="true"><span class="stars-on" style="width:100.0%">★★★★★</span>★★★★★</span>
           <small>20 Google reviews</small>
         </span>
       </div>
       <ul class="fact-list">
         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Rated 5.0 out of 5 across 20 Google reviews</li>
         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Four of the five reviews quoted below single out how well he communicates</li>
-        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>“He stuck with it until he got it working perfectly.” — a Google review</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>“…he stuck with it until he got it working perfectly.” — a Google review</li>
       </ul>
     </div>
   </div>
@@ -367,7 +369,7 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:44px 0
       <div class="svc">
         <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9h18"/><path d="M3 15h18"/><path d="M6 4v16"/><path d="M12 4v16"/><path d="M18 4v16"/></svg></div>
         <h3>Fence repair</h3>
-        <p>“The original fence and gutter repair we hired Kyle for,” writes one reviewer — the job that started a longer working relationship.</p>
+        <p>“…the original fence and gutter repair we hired Kyle for,” writes one reviewer — the job that started a longer working relationship.</p>
       </div>
       <div class="svc">
         <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7 12 3l9 4"/><path d="M4 9h16"/><path d="M5 9v3a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V9"/><path d="M16 15v6"/></svg></div>
@@ -382,7 +384,7 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:44px 0
       <div class="svc">
         <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21V9"/><path d="M8 9h8"/><path d="M12 9 7 3"/><path d="M12 9l5-6"/><path d="M9 21h6"/></svg></div>
         <h3>Rooftop &amp; antenna removal</h3>
-        <p>“Kyle did an excellent job taking down our old, chimney mounted TV antenna… he arrived on time, was friendly and completed the job quickly, safely,” a reviewer writes.</p>
+        <p>“Kyle did an excellent job taking down our old, chimney mounted TV antenna… He arrived on time, was friendly and completed the job quickly, safely,” a reviewer writes.</p>
       </div>
       <div class="svc">
         <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/><path d="M11 8v6"/><path d="M8 11h6"/></svg></div>
@@ -392,7 +394,7 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:44px 0
       <div class="svc">
         <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
         <h3>A whole list, in one go</h3>
-        <p>“I had a list of various projects I wanted done and discussed each one with Kyle… he did quality work on each project,” one reviewer writes.</p>
+        <p>“I had a list of various projects I wanted done and discussed each one with Kyle… He did quality work on each project,” one reviewer writes.</p>
       </div>
     </div>
   </div>
@@ -408,7 +410,7 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:44px 0
       </div>
       <div class="rev-score reveal" role="img" aria-label="Rated 5.0 out of 5 stars across 20 Google reviews">
         <span class="big" aria-hidden="true">5.0</span>
-        <span aria-hidden="true"><span class="stars" style="position:relative;display:inline-block;white-space:nowrap"><span style="color:#D6D8DC">★★★★★</span><span class="stars-on" style="position:absolute;left:0;top:0;overflow:hidden;white-space:nowrap;width:100.0%">★★★★★</span></span><small>20 Google reviews</small></span>
+        <span aria-hidden="true"><span class="stars" aria-hidden="true"><span class="stars-on" style="width:100.0%">★★★★★</span>★★★★★</span><small>20 Google reviews</small></span>
       </div>
     </div>
 
