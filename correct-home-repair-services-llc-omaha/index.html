@@ -100,6 +100,8 @@ header.scrolled .brand-mark{transform:scale(.94)}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
 .trust{display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;margin-top:26px;color:var(--muted);font-size:.93rem}
 .trust .stars{color:var(--accent);letter-spacing:2px;font-size:1rem}
+.stars{position:relative;display:inline-block;white-space:nowrap;color:var(--line2)}
+.stars .stars-on{position:absolute;left:0;top:0;overflow:hidden;color:var(--accent);white-space:nowrap;letter-spacing:inherit;font-size:inherit;line-height:inherit}
 .trust strong{color:var(--ink);font-weight:600}
 .trust .sep{width:1px;height:16px;background:var(--line-2);display:none}
 @media(min-width:520px){.trust .sep{display:block}}
@@ -328,7 +330,7 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:44px 0
         <a class="btn btn-secondary" href="#book">Request a quote</a>
       </div>
       <div class="trust hero-anim d5">
-        <span><span class="stars" aria-hidden="true" style="position:relative;display:inline-block;white-space:nowrap"><span style="color:#D6D8DC">★★★★★</span><span class="stars-on" style="position:absolute;left:0;top:0;overflow:hidden;white-space:nowrap;width:100.0%">★★★★★</span></span> <strong>5.0</strong> · 25 Google reviews</span>
+        <span><span class="stars" aria-hidden="true"><span class="stars-on" style="width:100.0%">★★★★★</span>★★★★★</span> <strong>5.0</strong> · 25 Google reviews</span>
         <span class="sep" aria-hidden="true"></span>
         <span>Kitchens · Bathrooms · Repairs</span>
         <span class="sep" aria-hidden="true"></span>
@@ -344,7 +346,7 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:44px 0
       <div class="rating-chip">
         <span class="score" aria-hidden="true">5.0</span>
         <span>
-          <span class="stars" aria-hidden="true" style="position:relative;display:inline-block;white-space:nowrap"><span style="color:#D6D8DC">★★★★★</span><span class="stars-on" style="position:absolute;left:0;top:0;overflow:hidden;white-space:nowrap;width:100.0%">★★★★★</span></span>
+          <span class="stars" aria-hidden="true"><span class="stars-on" style="width:100.0%">★★★★★</span>★★★★★</span>
           <small>25 Google reviews</small>
         </span>
       </div>
@@ -382,7 +384,7 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:44px 0
       <div class="svc">
         <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V9l6-4 6 4v12"/><path d="M15 21V12h6v9"/><path d="M7 13h2"/><path d="M7 17h2"/></svg></div>
         <h3>Renovation work</h3>
-        <p>“High-quality, thoughtful home repair and renovation at both of our residencies over the past five years,” one review says.</p>
+        <p>“…high-quality, thoughtful home repair and renovation at both of our residencies over the past five years,” one review says.</p>
       </div>
       <div class="svc">
         <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 9.5h18"/><path d="M3 14.5h18"/><path d="M9 4v5.5"/><path d="M15 9.5V15"/><path d="M9 14.5V20"/></svg></div>
@@ -392,7 +394,7 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:44px 0
       <div class="svc">
         <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3"/><path d="M12 18v3"/><path d="m5.6 5.6 2.1 2.1"/><path d="m16.3 16.3 2.1 2.1"/><path d="M3 12h3"/><path d="M18 12h3"/><circle cx="12" cy="12" r="4"/></svg></div>
         <h3>Home improvement projects</h3>
-        <p>“His creative instincts brought about a finished product much nicer than I originally imagined,” a Google review describes.</p>
+        <p>“…his creative instincts brought about a finished product much nicer than I originally imagined,” a Google review describes.</p>
       </div>
     </div>
   </div>
@@ -408,7 +410,7 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:44px 0
       </div>
       <div class="rev-score reveal" role="img" aria-label="Rated 5.0 out of 5 stars across 25 Google reviews">
         <span class="big" aria-hidden="true">5.0</span>
-        <span aria-hidden="true"><span class="stars" style="position:relative;display:inline-block;white-space:nowrap"><span style="color:#D6D8DC">★★★★★</span><span class="stars-on" style="position:absolute;left:0;top:0;overflow:hidden;white-space:nowrap;width:100.0%">★★★★★</span></span><small>25 Google reviews</small></span>
+        <span aria-hidden="true"><span class="stars" aria-hidden="true"><span class="stars-on" style="width:100.0%">★★★★★</span>★★★★★</span><small>25 Google reviews</small></span>
       </div>
     </div>
 
@@ -464,7 +466,7 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:44px 0
     <h2 class="reveal">How a job goes</h2>
     <div class="grid-steps stagger">
       <div class="step"><div class="num">1</div><h3>Call and describe the job</h3><p>Google counts communication in 4 of the 25 reviews. One says simply: “He's also very friendly and easy to communicate with.”</p></div>
-      <div class="step"><div class="num">2</div><h3>Agree the work and the price</h3><p>Reviewers talk about cost plainly — “the cost was great”, “his services come at a great value”, and prices “kept very economical”.</p></div>
+      <div class="step"><div class="num">2</div><h3>Agree the work and the price</h3><p>Reviewers talk about cost plainly — “the cost was great”, “His services come at a great value”, and prices “kept prices very economical”.</p></div>
       <div class="step"><div class="num">3</div><h3>It gets finished</h3><p>“He finishes what he starts in a timely manner,” one Google review says. Timely work shows up in Google's review topics too.</p></div>
     </div>
   </div>
@@ -486,7 +488,7 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:44px 0
       </div>
       <div class="qa">
         <button class="q" type="button" aria-expanded="false">How does pricing work?<svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
-        <div class="a"><p>Reviewers mention it themselves. One writes “the cost was great”, another “his services come at a great value”, and a third says prices were “kept very economical”. Call with the job and ask.</p></div>
+        <div class="a"><p>Reviewers mention it themselves. One writes “the cost was great”, another “His services come at a great value”, and a third says prices were “kept prices very economical”. Call with the job and ask.</p></div>
       </div>
       <div class="qa">
         <button class="q" type="button" aria-expanded="false">Do you do bigger projects, or only small repairs?<svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
